@@ -1,0 +1,17 @@
+
+<div class="todoList">
+    <ul class="list-group"
+    *ngIf="getTodoItem.length > 0 ; else noTodo">
+        <li class="list-group-item mb-2"
+        *ngFor="let todo of getTodoItem ; let i = index">
+            {{i + 1}}] {{todo.todoitem}}
+        </li>
+    </ul>
+</div>
+<ng-template #noTodo>
+    <p class="alert alert-danger text-danger">
+        no TodoItem Added!!
+    </p>
+</ng-template>
+
+

@@ -1,0 +1,33 @@
+
+<ng-template #nostd>
+  <p class="alert alert-danger text-danger">
+   no std added yet!!!
+  </p>
+</ng-template>
+
+<table class="table table-dark"
+*ngIf="stdInfo.length > 0 ; else nostd">
+    <thead>
+       <tr>
+        <th>Sr No.</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Contact</th>
+       </tr>
+    </thead>
+    <tbody>
+      <tr
+      *ngFor="let std of stdInfo ;let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{std.fname}}</td>
+        <td>{{std.lname}}</td>
+        <td>{{std.email}}</td>
+        <td>{{std.address}}</td>
+        <td>{{std.contact}}</td>
+        <td></td>
+      </tr>
+    </tbody>
+    
+</table>
